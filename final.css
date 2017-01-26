@@ -1,0 +1,452 @@
+/* 
+
+PIC 40A FINAL PROJECT
+file: final.css
+author: Don Pham
+date: December 10, 2016
+
+*/
+
+body, html {
+    font-family: 'Lato';
+    height: 100%;
+    margin: auto;
+}
+
+
+/* parallax scrolling effect */
+.parallax {
+    background-image: url("testestest.png");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: cover;
+    background-size: cover;
+}
+
+/* slpash page arrow */
+.fa-arrow-down {
+    color: white;
+    position: relative;
+    left: 50%;
+    top: 90%;
+}
+
+/* RECESS, (n) */
+#title {
+    font-family: 'Lato';
+    font-size: 120px;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 1em;
+    margin-bottom: 1px;
+}
+
+/* RECESS "definition" */
+.p1 {
+    font-family:'Lato';
+    text-align: left;
+    font-size: 18px;
+    margin-left: 23.8%;
+    margin-right: 30%;
+    padding: 20px 20px;
+}
+
+/* How long? */
+.p2 {
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    
+}
+        
+
+.main_container {
+    height: 100%;
+    text-align: center;
+    overflow: auto;
+    display: block;
+}
+        
+
+/* NOT RESPONSIVE DESIGN - FIX THIS */
+.main_buttons {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    padding: 0px;
+}
+
+        
+input[name="minutes"] {
+    font-size: 15px;
+    background-color: #84589b;
+    border: none;
+    margin: auto;
+    color: white;
+    padding: 1.5em 4em;
+    box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.2);
+}
+
+
+input[name="minutes"]:hover {
+    background-color: rgb(63, 159, 115);
+    opacity: .75;
+    cursor: pointer;
+}
+
+
+/* INFO MODAL BUTTON POP UP */
+#infoBtn {
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(63, 159, 115);
+    margin: auto;
+    padding: 0px;
+    border-color: transparent;
+    border-radius: 50%;
+    border-bottom-left-radius: 0px;
+    position: relative;
+    top: 1em;
+}
+
+
+#infoBtn:hover {
+    opacity: .45;
+    cursor: pointer;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-header {
+    margin: auto;
+    padding: 2px 16px;
+    background-color: rgb(63, 159, 96);
+    color: white;
+}
+
+.modal-body {
+    text-align: left;
+    margin: 2em 5em;
+    padding: 0px;
+}
+
+#note {
+    font-size: 12px;
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 0px;
+    border: 1px solid #888;
+    width: 55%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 4px 200px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+/* modal animate */
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+
+/* modal close */
+.close {
+    color: #efefef;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+/* search bar */
+#reveal {
+    margin-top: 2em;
+    display: none;
+    animation-name: animateURL;
+    animation-duration: 1s;
+}
+
+@keyframes animateURL {
+    from {opacity:0}
+    to {opacity:1}
+}
+@-webkit-keyframes animatetop {
+    from {opacity:0} 
+    to {opacity:1}
+}
+
+
+
+/* 'enter destination' */
+#p3 {
+    margin-left: 36.5%;
+    margin-right: 30%;
+    margin-bottom: 1px;
+    text-align: left;
+}
+
+#goBtn {
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(63, 159, 115);
+    margin: auto;
+    padding: .3em;
+    border-color: transparent;
+    border-radius: 50%;
+    border-bottom-left-radius: 0px;
+    position: relative;
+    top: .2em
+}
+
+#goBtn:hover {
+    opacity: .45;
+    cursor: pointer;
+}
+
+#enterURL {
+    width: 25%;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin: 8px 0;
+    padding: 12px 20px;
+    outline: none;
+
+}
+
+#enterURL:focus {
+    border: 1px solid #555;
+}
+
+/* footer */
+#pf {
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.custom-time-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);  Black w/ opacity 
+}
+
+.cForm-header {
+    margin: auto;
+    padding: 2px 16px;
+    background-color: rgb(63, 159, 96);
+    color: white;
+}
+
+.cForm-body {
+    text-align: center;
+    margin: 2em 5em;
+    padding: 0px;
+}
+
+#cValue {
+    width: 60%;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin: 0px 0px 20px 0px;
+    padding: 12px 20px;
+    outline: none;
+}
+
+#cEnter {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    padding: 0px;
+    font-size: 15px;
+    background-color: rgb(63, 159, 96);
+    border: none;
+    margin: auto;
+    color: white;
+    padding: .8em .9em;
+}
+
+#cCancel {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    padding: 0px;
+    font-size: 15px;
+    background-color: rgba(112, 110, 113, 0.48);
+    border: none;
+    margin: auto;
+    color: white;
+    padding: .8em .9em;
+}
+
+.closeC {
+    color: #efefef;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.closeC:hover,
+.closeC:focus {
+    color: black;
+    cursor: pointer;
+}
+
+.cForm-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 0px;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 4px 200px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animateCustom;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animateCustom;
+    animation-duration: 0.4s
+}
+
+/* custom modal animate */
+@keyframes animateCustom {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@-webkit-keyframes animateCustom {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+#breakTime {
+    opacity: 100%;
+    text-align: center;
+    width: auto;
+    font-size: 25pt;
+    margin-bottom: 1em;
+}
+
+#radioPref {
+    margin-left: 36.5%;
+    margin-right: 30%;
+    margin-bottom: 1px;
+    text-align: left;
+}
+
+
+
+#reveal-if-checked {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 1px, 2em, 2em, 1px;
+    padding-bottom: 1em;
+}
+
+
+/*
+input[type="radio"]:checked ~.reveal-if-cheked,
+input[type="checked"]:checked ~.reveal-if-cheked {
+    opacity: 1;
+    max-height: 100px;
+    overflow: visible;
+}
+*/
+
+#splashtitle {
+    color: white;
+    font-family: 'Lato';
+    font-size: 150pt;
+    margin: auto;
+    float: right;
+    position: relative;
+    top: 2.79em;
+    right: .415em;
+}
+
+#UNfield {
+    width: 15%;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 12px 20px;
+    outline: none;
+}
+
+#UNfield:focus {
+    border: 1px solid #555;
+}
+
+#emailfield {
+    width: 20%;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 12px 20px;
+    outline: none;
+}
+
+#emailfield:focus {
+    border: 1px solid #555;
+}
+#preferences {
+    margin: auto;
+}
+
+#submitBtn {
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(63, 159, 115);
+    margin: auto;
+    padding: .3em;
+    border-color: transparent;
+    border-radius: 50%;
+    border-bottom-left-radius: 0px;
+    position: relative;
+    top: .15em
+}
+
+#submitBtn:hover {
+    opacity: .45;
+    cursor: pointer;
+}

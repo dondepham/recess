@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<!-- 
+
+PIC 40A FINAL PROJECT
+file: index.html
+author: Don Pham
+date: December 10, 2016
+
+--> 
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    
+<head>
+    <title>R E C E S S</title>
+    
+    <script src="recess.js"></script>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="DTP"/>
+    <meta name="description" content="recessus: &quot;a going back, retreat.&quot;">
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+    
+    <!-- user defined CSS -->
+    <link href="final.css" rel="stylesheet" type="text/css" />
+    
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+
+    <!-- Roboto Font source -->
+    <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!-- Roboto Slab -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <!-- Lato Font source -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+    
+
+<body>
+    
+
+    <div class="parallax">
+        <p id="splashtitle">/ ˈ r ē ˌ s e s /</p>
+        <i class="fa fa-arrow-down fa-2x" aria-hidden="true" id=""></i>
+    </div>
+    
+    <div class="main_container">
+        <h1 id="title">R E C E S S , (n) :</h1>
+        <p class="p1"> A break from doing something, such as work or school. <br> Everyone looks forward to taking a recess — even if you don't have access to monkey bars.</p>
+        
+        <hr width="30%">
+        
+        <p class="p2">How long would you like to break for?</p>
+
+        <div class="main_buttons">
+            <form action="" method="get">
+            <table>
+                <tr>
+                    <!-- doSomething() should also call AJAX function to store timestamp -->
+                    <td><input type = "button" value = "// 5 MINS" name="minutes" onclick="perform_task(1)"/>&nbsp;</td>
+                    <td><input type = "button" value = "// 10 MINS" name="minutes" onclick="perform_task(2)"/>&nbsp;</td>
+                    <td><input type = "button" value = "// 15 MINS" name="minutes" onclick="perform_task(3);"/>&nbsp;</td>
+
+                    <! -- DETERMINE VALUE + FIX THIS ISH -->
+                    <td><input type = "button" value = "// CUSTOM" name="minutes" id="cTime"/></td>
+
+                     <!-- qButton for info modal FontAwesome ASCII -->
+                    <td>&nbsp;<button type="button" id="infoBtn">&#xf059;</button></td>
+            </table>
+            </form>
+        </div>
+        
+        
+        <!-- CUSTOM TIME MODAL -->
+        <div id="cForm-modal" class="custom-time-modal">
+            <div class="cForm-content">
+                <div class="cForm-header">
+                    <span class="closeC">&times;</span>
+                    <h2>C U S T O M &nbsp; T I M E</h2>
+                </div>
+            <div class="cForm-body">
+                <p>Please input a custom time (in minutes):</p>
+                <form action="" method="get">
+                <!-- dummy input to prevent enter key from submitting -->
+                <input type="text" style="display: none;" />
+                <!-- (?=.*\d) for digits, up to 4 values -->
+                <input type="number" placeholder="'10' = 10 mins" pattern="(?=.*\d).{4,}" id="cValue" />
+                <br>
+                <button type="button" id="cCancel">CANCEL</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" id="cEnter">ENTER</button>
+                </form>
+            </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- POP UP URL BAR -->
+        <div id="reveal">
+            <form action="" method="get">
+                <p id="breakTime">BREAK TIME: </p>
+                <!-- dummy input to prevent enter key from submitting -->
+                <input type="text" style="display: none;" />
+                <p id="p3">Enter a destination:<br></p>
+                <input type="url" placeholder="// www.aWebsite.com" id="enterURL"/>
+                <button type="button" id="goBtn">&#xf002;</button><br>
+            </form>
+                <label for="savePref">
+                    <input type="checkbox" name="savePref" id="savePref"/>
+                    Save Preferences?
+                </label>
+            
+            
+            
+            <!-- POP UP PREFERENCES CHECKBOX/FORM -->
+            <div id="preferences">
+                <div id="reveal-if-checked">
+                    <p>Signing up will allow you to keep track of how long you've spent on each website, and save your custom time preferences :-)</p>
+                    <form action="final.php" method="POST">
+                        Username: <input type="text" name="uname" id="UNfield"/> 
+                        &nbsp;&nbsp;
+                        E-mail Address: <input type="text" name="email" id="emailfield"/>
+                        &nbsp;
+                        <input type="submit" value="&#xf138;" id="submitBtn" onclick="process_form()">
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        
+
+
+
+        
+        <!-- INFORMATION MODAL -->
+        <div id="infoModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>W H A T &nbsp i s &nbsp R E C E S S ?</h2>
+            </div>
+            <div class="modal-body">
+                <p>The internet is a fascinating place- a 21st century marvel and an abyss of knowledge and entertainment. As a result, I've found that a quick break often turns into hours of watching sloths eat carrots and browsing dank memes. </p>
+                <p> Thus, I've created this web tool to help limit these frivolous distractions (and to impress my Professor lol). You'll probably still watch cat videos, I don't know. I'm not your mom. You should give her a call though.</p>
+                <hr width=50%>
+                <p> I N S T R U C T I O N S : </p>
+                <p>
+                    1. Select a time option, or enter your own. <br>
+                    2. Select a destination and browse away. <br>
+                    3. When time's up, the tab will close itself. </p>
+                <p id="note"> note: <br>
+                This <i>should</i> work with all browsers, but may exhibit problems for Firefox v46.0.1+ and IE9. They just don't get along (bad breakup maybe?)</p>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+    
+    <footer>
+        <p id="pf">PIC:40A FINAL PROJECT // WEBMASTER: DONTHEPHAM</p>
+    </footer>
+    
+    <!-- JS Scripts; didn't work in header so placed here -->
+    <script src="recess.js"></script>
+</body>
+    
+
+</html>
